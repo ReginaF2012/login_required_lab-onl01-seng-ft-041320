@@ -1,0 +1,7 @@
+<% if current_user %>
+  <h1>Hi, <%= current_user %></h1>
+  <%= link_to("A Secret", secret_path) %>
+  <%= link_to("Log Out", logout_path, method: :post) %>
+<% else %>
+  <%= link_to("Log In", login_path) %>
+<% end %>
